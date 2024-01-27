@@ -1,0 +1,27 @@
+CREATE DATABASE UBER;
+USE UBER;
+CREATE TABLE Passenger2
+(
+PASSENGER_ID INT PRIMARY KEY,
+PASSENGER_NAME VARCHAR(40),
+Travel_date datetime,
+DRIVER_ID INT unique,
+DRIVER_NAME VARCHAR(40),
+PICK_UP VARCHAR(40),
+DROP_OFF VARCHAR(40),
+FARE INT,
+AVAILABLE_VECHILE VARCHAR(40),
+pass_dri int,
+foreign key (pass_dri)  references driver(Driver_id)
+);
+
+CREATE DATABASE DEMOO ;
+
+USE DEMOO ;
+
+CREATE TABLE Driver
+(
+DRIVER_ID INT PRIMARY KEY,
+Travel_date datetime,
+FARE INT
+);
